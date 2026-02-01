@@ -88,6 +88,12 @@
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
         };
+
+        rot_mmv: rot_mmv {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&mmv>, <&mmv>;
+        };
     };
 
     macros {
@@ -298,15 +304,28 @@
             >;
         };
 
-        /* Layer 3: MOUSE */
+        /* Layer 3: MOUSE (rewrite) */
         layer3 {
-            label = "MOUSE";
-            bindings = <
-                &none   &kp LALT     &kp LG(TAB)  &trans         &kp LG(D)        &mo MOUSE2   &mo MOUSE4      &click_and_exit2   &mkp MB3        &mkp MB2          &kp RALT     &none
-                &none   &kp LSHFT    &trans       &trans         &kp LS(LG(S))    &trans      &mkp MB1        &kp C_AC_BACK      &kp C_AC_REFRESH &kp C_AC_FORWARD  &to DEFAULT_WIN &none
-                &none   &trans       &trans       &trans         &trans           &trans      &none  &none  &trans           &trans           &trans           &trans         &trans       &none
-                &none   &kp LSHFT    &trans       &trans         &kp LALT          &kp LSHFT   &kp LSHFT       &trans             &trans           &to DEFAULT_WIN   &kp RALT     &none
-            >;
+        label = "MOUSE";
+
+        // ★追加：左右エンコーダの割り当て（左=X、右=Y）
+        // 左: CW→右, CCW→左 / 右: CW→下, CCW→上
+        sensor-bindings =
+            <&rot_mmv MOVE_RIGHT MOVE_LEFT   &rot_mmv MOVE_DOWN MOVE_UP>;
+
+        bindings = <
+            /* row1 (12) */
+            &none      &trans      &trans          &mmv MOVE_UP          &trans        &trans      &trans        &trans          &trans        &trans        &trans     &none
+
+            /* row2 (12) */
+            &none      &trans      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT      &trans      &mkp LCLK     &mkp RCLK        &mkp MCLK     &trans        &trans     &none
+
+            /* row3 (14) */
+            &none      &trans      &trans        &trans        &trans        &trans      &none  &none  &trans        &trans        &trans        &trans      &trans     &none
+
+            /* row4 (12) */
+            &none      &to DEFAULT_WIN  &trans    &trans        &trans        &trans      &trans        &trans          &trans        &trans        &trans     &none
+        >;
         };
 
         /* Layer 4: ARROW */
