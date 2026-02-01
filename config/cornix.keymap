@@ -355,9 +355,9 @@
         layer6 {
             label = "SDVX";
             bindings = <
-                &none  &trans &kp M &trans &trans &trans               &trans &trans &trans &kp C &trans &none
+                &none  &trans &kp C &trans &trans &trans               &trans &trans &trans &kp M &trans &none
                 &none  &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &none
-                &none  &trans &kp K &trans &kp J &trans   &none &none &trans &kp F &trans &kp D &trans &none
+                &none  &trans &kp F &trans &kp D &trans   &none &none &trans &kp K &trans &kp J &trans &none
                 &none  &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &none
             >;
             sensor-bindings = <&inc_dec_kp L SEMICOLON &inc_dec_kp A S>;
