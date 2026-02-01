@@ -291,6 +291,7 @@
                 &none   &trans              &kp SLASH        &kp JP_PIPE      &kp JP_YEN           &kp LEFT         &none  &none  &kp DOWN         &kp ENTER           &kp JP_DQUOTE      &kp JP_QUOTE &kp JP_BACKQUOTE &none
                 &none   &trans              &trans           &kp LC(X)        &kp LC(C)            &kp LC(V)        &kp LC(Z)          &kp LC(Y)           &kp LC(LS(Z))      &trans             &trans      &none
             >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         /* Layer 2: NUMBER */
