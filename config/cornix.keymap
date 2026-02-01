@@ -353,13 +353,14 @@
 
         /* Layer 6: VRC */
         layer6 {
-            label = "VRC";
+            label = "SDVX";
             bindings = <
-                &none  &kp Q   &kp W   &kp W   &kp R   &kp E      &kp Y      &mkp MB1   &mkp MB3   &mkp MB2   &kp P   &none
-                &none  &kp LSHFT &kp A  &kp S   &kp D   &kp G      &kp V      &kp LS(F1) &kp LS(F2) &kp LS(F3) &kp LS(F4) &none
-                &none  &kp TAB &mt LSHFT X &kp C &kp Z  &kp B      &none &none &kp N     &kp LS(F5) &kp LS(F6) &kp LS(F7) &kp LS(F8) &none
-                &none  &kp TAB &kp LALT &kp SPACE &mo 0 &kp RCMD   &kp ESC    &kp R      &lt NUMBER V  &kp END   &to DEFAULT_WIN &none
+                &none  &trans &kp M &trans &trans &trans               &trans &trans &trans &kp C &trans &none
+                &none  &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &none
+                &none  &trans &kp K &trans &kp J &trans   &none &none &trans &kp F &trans &kp D &trans &none
+                &none  &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &none
             >;
+            sensor-bindings = <&inc_dec_kp L SEMICOLON &inc_dec_kp A S>;
         };
 
         /* Layer 7: MOUSE2 */
