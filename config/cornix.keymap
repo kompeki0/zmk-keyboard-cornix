@@ -89,6 +89,20 @@
             bindings = <&mo>, <&kp>;
         };
 
+        sks: sticky_key_short {
+            compatible = "zmk,behavior-sticky-key";
+            #binding-cells = <1>;
+            bindings = <&kp>;
+            release-after-ms = <50>;
+            ignore-modifiers;
+        };
+
+        rot_long: rot_long {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&sks>, <&sks>;
+        };
+
         rot_mmv: rot_mmv {
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
@@ -360,7 +374,7 @@
                 &none  &trans &kp F &trans &kp D &trans   &none &none &trans &kp K &trans &kp J &trans &none
                 &none  &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &none
             >;
-            sensor-bindings = <&inc_dec_kp L SEMICOLON &inc_dec_kp A S>;
+            sensor-bindings = <&rot_long L SEMICOLON &rot_long A S>;
         };
 
         /* Layer 7: MOUSE2 */
