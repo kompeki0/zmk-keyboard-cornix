@@ -93,7 +93,7 @@
             compatible = "zmk,behavior-sticky-key";
             #binding-cells = <1>;
             bindings = <&kp>;
-            release-after-ms = <50>;
+            release-after-ms = <100>;
             ignore-modifiers;
         };
 
@@ -374,7 +374,7 @@
                 &none  &trans &kp F &trans &kp D &trans   &none &none &trans &kp K &trans &kp J &trans &none
                 &none  &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &none
             >;
-            sensor-bindings = <&rot_long L SEMICOLON &rot_long A S>;
+            sensor-bindings = <&rot_long A S &rot_long L SEMICOLON>;
         };
 
         /* Layer 7: MOUSE2 */
