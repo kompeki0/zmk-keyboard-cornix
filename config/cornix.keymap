@@ -93,7 +93,7 @@
             compatible = "zmk,behavior-sticky-key";
             #binding-cells = <1>;
             bindings = <&kp>;
-            release-after-ms = <100>;
+            release-after-ms = <200>;
             ignore-modifiers;
         };
 
@@ -369,10 +369,10 @@
         layer6 {
             label = "SDVX";
             bindings = <
-                &none  &trans &kp C &trans &trans &trans               &trans &trans &trans &kp M &trans &none
-                &none  &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &none
-                &none  &trans &kp F &trans &kp D &trans   &none &none &trans &kp K &trans &kp J &trans &none
-                &none  &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &none
+                &kp C &kp C &kp C &kp C &kp C &kp C              &kp M &kp M &kp M &kp M &kp M &kp M
+                &kp F  &kp F &kp F  &kp D &kp D &kp D               &kp K &kp K &kp K &kp J &kp J &kp J
+                &kp F  &kp F &kp F &kp D &kp D &kp D   &none &none &kp K &kp K &kp K &kp J &kp J &kp J
+                &kp ENTER &kp ENTER &kp ENTER &kp ENTER &kp ENTER  &to DEFAULT_WIN               &kp ESC &kp ENTER &kp ENTER &kp ENTER &kp ENTER &kp ENTER 
             >;
             sensor-bindings = <&rot_long A S &rot_long L SEMICOLON>;
         };
