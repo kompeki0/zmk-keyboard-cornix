@@ -360,9 +360,10 @@
             #binding-cells = <2>;
             bindings =
                 <&macro_param_2to1>
-                , <&macro_release &kp 0>
+                , <&macro_tap &kt_off 0>
                 , <&macro_param_1to1>
-                , <&macro_tap &sks 0>
+                , <&macro_tap &kt_on 0>
+                , <&macro_wait_time 200>
                 ;
         };
 
