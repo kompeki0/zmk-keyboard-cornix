@@ -114,21 +114,28 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&trig_k>, <&none>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_RCTL)>;
         };
 
         sdvx_d: sdvx_d {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&trig_d>, <&none>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_LALT)>;
         };
 
         sdvx_f: sdvx_f {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&trig_f>, <&none>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        sdvx_start: sdvx_start {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&trig_start>, <&none>;
+            mods = <(MOD_LGUI)>;
         };
 
         sks: sticky_key_short {
@@ -149,8 +156,8 @@
         kt_off: key_toggle_off_only {
             compatible = "zmk,behavior-key-toggle";
             #binding-cells = <1>;
-            display-name = "Key Toggle On";
-            toggle-mode = "on";
+            display-name = "Key Toggle Off";
+            toggle-mode = "off";
         };
 
         rot_long: rot_long {
@@ -297,9 +304,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_tap &kt_on J &kt_on RSHFT>
+                <&macro_tap &kt_on J &kt_on RALT>
                 , <&macro_pause_for_release>
-                , <&macro_tap &kt_off J &kt_off RSHFT>
+                , <&macro_tap &kt_off J &kt_off RALT>
                 ;
         };
 
@@ -308,9 +315,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_tap &kt_on K &kt_on RSHFT>
+                <&macro_tap &kt_on K &kt_on RCTL>
                 , <&macro_pause_for_release>
-                , <&macro_tap &kt_off K &kt_off RSHFT>
+                , <&macro_tap &kt_off K &kt_off RCTL>
                 ;
         };
 
@@ -319,9 +326,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_tap &kt_on D &kt_on RSHFT>
+                <&macro_tap &kt_on D &kt_on LALT>
                 , <&macro_pause_for_release>
-                , <&macro_tap &kt_off D &kt_off RSHFT>
+                , <&macro_tap &kt_off D &kt_off LALT>
                 ;
         };
 
@@ -330,9 +337,20 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_tap &kt_on F &kt_on RSHFT>
+                <&macro_tap &kt_on F &kt_on LCTL>
                 , <&macro_pause_for_release>
-                , <&macro_tap &kt_off F &kt_off RSHFT>
+                , <&macro_tap &kt_off F &kt_off LCTL>
+                ;
+        };
+
+        trig_start: trig_start {
+            label = "TRIG_START";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap &kt_on ENTER &kt_on LGUI>
+                , <&macro_pause_for_release>
+                , <&macro_tap &kt_off ENTER &kt_off LGUI>
                 ;
         };
 
@@ -357,6 +375,7 @@
         timeout-ms = <50>;
         key-positions = <3 4>;        // LT2(E)=3, LT1(R)=4
         bindings = <&kp JP_LBRACE>;
+        layers = <DEFAULT_WIN>;
     };
 
     // (U + I) -> }
@@ -364,6 +383,7 @@
         timeout-ms = <50>;
         key-positions = <7 8>;        // RT1(U)=7, RT2(I)=8
         bindings = <&kp JP_RBRACE>;
+        layers = <DEFAULT_WIN>;
     };
 
     // (D + F) -> (
@@ -371,6 +391,7 @@
         timeout-ms = <50>;
         key-positions = <15 16>;      // LM2(D)=15, LM1(F)=16
         bindings = <&kp JP_LPAREN>;
+        layers = <DEFAULT_WIN>;
     };
 
     // (J + K) -> )
@@ -378,6 +399,7 @@
         timeout-ms = <50>;
         key-positions = <19 20>;      // RM1(J)=19, RM2(K)=20
         bindings = <&kp JP_RPAREN>;
+        layers = <DEFAULT_WIN>;
     };
 
     // (C + V) -> [
@@ -385,6 +407,7 @@
         timeout-ms = <50>;
         key-positions = <27 28>;      // LB2(C)=27, LB1(V)=28
         bindings = <&kp JP_LBRACKET>;
+        layers = <DEFAULT_WIN>;
     };
 
     // (M + ,) -> ]
@@ -392,6 +415,7 @@
         timeout-ms = <50>;
         key-positions = <33 34>;      // RB1(M)=33, RB2(,)=34
         bindings = <&kp JP_RBRACKET>;
+        layers = <DEFAULT_WIN>;
     };
 
     // (L + Space) -> ; / : (shiftで切替)  ※あなたの colon_semi を使用
@@ -399,6 +423,7 @@
         timeout-ms = <50>;
         key-positions = <21 22>;      // RM3(L)=21, RM4(あなたのSpaceキー)=22
         bindings = <&colon_semi>;
+        layers = <DEFAULT_WIN>;
     };
 
     // (LCTRL + TAB) -> 英数 (LANG2)
@@ -407,6 +432,7 @@
         timeout-ms = <50>;
         key-positions = <41 42>;      // LH2(LCTRL)=41, LH1(TAB)=42
         bindings = <&kp LANG2>;
+        layers = <DEFAULT_WIN>;
     };
 
     // (Space + Enter) -> かな (LANG1)
@@ -415,6 +441,7 @@
         timeout-ms = <50>;
         key-positions = <45 46>;      // RH1(SPACE)=45, RH2(ENTER)=46
         bindings = <&kp LANG1>;
+        layers = <DEFAULT_WIN>;
     };
     sdvx_esc {
         timeout-ms = <50>;
@@ -528,9 +555,9 @@
         layer6 {
             label = "SDVX";
             bindings = <
-                &sdvx_c &sdvx_c &sdvx_c &sdvx_c &sdvx_c &sdvx_c             &kp M &kp M &kp M &kp M &kp M &kp M
-                &kp F  &kp F &kp F  &kp D &kp D &kp D               &kp K &kp K &kp K &kp J &kp J &kp J
-                &kp F  &kp F &kp F &kp D &kp D &kp D   &none &none &kp K &kp K &kp K &kp J &kp J &kp J
+                &sdvx_c &sdvx_c &sdvx_c &sdvx_c &sdvx_c &sdvx_c              &sdvx_m &sdvx_m &sdvx_m &sdvx_m &sdvx_m &sdvx_m
+                &sdvx_f  &sdvx_f &sdvx_f  &sdvx_d &sdvx_d &sdvx_d              &sdvx_k &sdvx_k &sdvx_k  &sdvx_j &sdvx_j &sdvx_j
+                &sdvx_f  &sdvx_f &sdvx_f &sdvx_d &sdvx_d &sdvx_d   &none &none &sdvx_k &sdvx_k &sdvx_k &sdvx_j &sdvx_j &sdvx_j
                 &kp ENTER &kp ENTER &kp ENTER &none &none &none                &none &none &none &kp ENTER &kp ENTER &kp ENTER 
             >;
             sensor-bindings = <&rot_long_left &rot_long_right>;
