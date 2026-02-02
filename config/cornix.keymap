@@ -89,10 +89,10 @@
             bindings = <&mo>, <&kp>;
         };
 
-        only_one_c: only_one_c {
+        sdvx_c: sdvx_c {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp C>, <&none>;
+            bindings = <&trig_c>, <&none>;
             mods = <(MOD_RSFT)>;
         };
 
@@ -100,7 +100,7 @@
             compatible = "zmk,behavior-sticky-key";
             #binding-cells = <1>;
             bindings = <&kp>;
-            release-after-ms = <3000>;
+            release-after-ms = <200>;
             ignore-modifiers;
         };
 
@@ -235,17 +235,17 @@
                 ;
         };
 
-        sdvx_c: sdvx_c {
-            label = "SDVX_C";
+        trig_c: trig_c {
+            label = "TRIG_C";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press &only_one_c &kp RSHFT>
+                <&macro_press &kp C &kp RSHFT>
                 , <&macro_pause_for_release>
-                , <&macro_release &only_one_c &kp RSHFT>
+                , <&macro_release &kp C &kp RSHFT>
                 ;
         };
-        
+
         change_direction: change_direction {
             label = "CHANGE_DIRECTION";
             compatible = "zmk,behavior-macro-two-param";
