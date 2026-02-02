@@ -22,7 +22,7 @@
 #define MOUSE 3
 #define ARROW 4
 #define FUNCTION 5
-#define VRC 6
+#define SDVX 6
 #define MOUSE2 7
 #define MOUSE3 8
 #define MOUSE4 9
@@ -269,6 +269,18 @@
         key-positions = <45 46>;      // RH1(SPACE)=45, RH2(ENTER)=46
         bindings = <&kp LANG1>;
     };
+    sdvx_esc {
+        timeout-ms = <50>;
+        key-positions = <43 44>;      // RH1(SPACE)=45, RH2(ENTER)=46
+        bindings = <&kp ESC>;
+        layers = <SDVX>;
+    };
+    sdvx_end {
+        timeout-ms = <50>;
+        key-positions = <41 46>;      // RH1(SPACE)=45, RH2(ENTER)=46
+        bindings = <&to DEFAULT_WIN>;
+        layers = <SDVX>;
+    };
     };
 
 
@@ -359,20 +371,20 @@
             label = "FUNCTION";
             bindings = <
                 &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4   &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &none
-                &none  &to DEFAULT_WIN &to VRC     &trans        &trans        &bt BT_CLR      &kp F6  &kp F7  &kp F8  &kp F9  &kp F10 &none
+                &none  &to DEFAULT_WIN &to SDVX     &trans        &trans        &bt BT_CLR      &kp F6  &kp F7  &kp F8  &kp F9  &kp F10 &none
                 &none  &trans        &trans        &trans        &trans        &bt BT_CLR_ALL  &none  &none  &kp F11 &kp F12 &trans  &trans  &trans &none
                 &none  &trans        &trans        &trans        &trans        &trans          &kp DEL &trans  &trans  &trans  &trans  &none
             >;
         };
 
-        /* Layer 6: VRC */
+        /* Layer 6: SDVX */
         layer6 {
             label = "SDVX";
             bindings = <
                 &kp C &kp C &kp C &kp C &kp C &kp C              &kp M &kp M &kp M &kp M &kp M &kp M
                 &kp F  &kp F &kp F  &kp D &kp D &kp D               &kp K &kp K &kp K &kp J &kp J &kp J
                 &kp F  &kp F &kp F &kp D &kp D &kp D   &none &none &kp K &kp K &kp K &kp J &kp J &kp J
-                &kp ENTER &kp ENTER &kp ENTER &kp ENTER &kp ENTER  &to DEFAULT_WIN               &kp ESC &kp ENTER &kp ENTER &kp ENTER &kp ENTER &kp ENTER 
+                &kp ENTER &kp ENTER &kp ENTER &none &none &none                &none &none &none &kp ENTER &kp ENTER &kp ENTER 
             >;
             sensor-bindings = <&rot_long A S &rot_long L SEMICOLON>;
         };
