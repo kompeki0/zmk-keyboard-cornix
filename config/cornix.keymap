@@ -100,14 +100,14 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&trig_m>, <&none>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_LSFT)>;
         };
 
         sdvx_j: sdvx_j {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&trig_j>, <&none>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_RALT)>;
         };
 
         sdvx_k: sdvx_k {
@@ -278,6 +278,61 @@
                 <&macro_tap &kt_on C &kt_on RSHFT>
                 , <&macro_pause_for_release>
                 , <&macro_tap &kt_off C &kt_off RSHFT>
+                ;
+        };
+
+        trig_m: trig_m {
+            label = "TRIG_M";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap &kt_on M &kt_on LSHFT>
+                , <&macro_pause_for_release>
+                , <&macro_tap &kt_off M &kt_off LSHFT>
+                ;
+        };
+
+        trig_j: trig_j {
+            label = "TRIG_J";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap &kt_on J &kt_on RSHFT>
+                , <&macro_pause_for_release>
+                , <&macro_tap &kt_off J &kt_off RSHFT>
+                ;
+        };
+
+        trig_k: trig_k {
+            label = "TRIG_K";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap &kt_on K &kt_on RSHFT>
+                , <&macro_pause_for_release>
+                , <&macro_tap &kt_off K &kt_off RSHFT>
+                ;
+        };
+
+        trig_d: trig_d {
+            label = "TRIG_D";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap &kt_on D &kt_on RSHFT>
+                , <&macro_pause_for_release>
+                , <&macro_tap &kt_off D &kt_off RSHFT>
+                ;
+        };
+
+        trig_f: trig_f {
+            label = "TRIG_F";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap &kt_on F &kt_on RSHFT>
+                , <&macro_pause_for_release>
+                , <&macro_tap &kt_off F &kt_off RSHFT>
                 ;
         };
 
