@@ -565,7 +565,7 @@
                 &kp ENTER &kp ENTER &kp ENTER &none &none &none                &none &none &none &kp ENTER &kp ENTER &kp ENTER 
             >;
             //sensor-bindings = <&rot_long_left &rot_long_right>;
-            sensor-bindings = <&rot_long L SEMICOLON &rot_long A S>;
+            sensor-bindings = <&rot_long A S &rot_long L SEMICOLON>;
         };
 
         /* Layer 7: MOUSE2 */
