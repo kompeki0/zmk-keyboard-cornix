@@ -283,8 +283,8 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap &kt_on C &kt_on RSHFT>
-                , <&macro_pause_for_release>
-                , <&macro_tap &kt_off C &kt_off RSHFT>
+                , <&macro_wait_time 50>
+                , <&macro_tap &kt_on C &kt_off RSHFT>
                 ;
         };
 
