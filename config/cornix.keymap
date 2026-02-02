@@ -92,7 +92,7 @@
         sdvx_c: sdvx_c {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&trig_c>, <&none>;
+            bindings = <&trig_c>, <&kt_on C>;
             mods = <(MOD_RSFT)>;
         };
 
