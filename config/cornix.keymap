@@ -214,11 +214,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press &only_one_c>
-                , <&macro_press &kp RSHFT>
+                <&macro_press &only_one_c &kp RSHFT>
+                , <&macro_press>
                 , <&macro_pause_for_release>
-                , <&macro_release &only_one_c>
-                , <&macro_release &kp RSHFT>
+                , <&macro_release &only_one_c &kp RSHFT>
                 ;
         };
 
