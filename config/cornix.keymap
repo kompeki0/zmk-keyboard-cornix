@@ -142,7 +142,7 @@
             compatible = "zmk,behavior-sticky-key";
             #binding-cells = <1>;
             bindings = <&kp>;
-            release-after-ms = <200>;
+            release-after-ms = <100>;
             ignore-modifiers;
         };
 
