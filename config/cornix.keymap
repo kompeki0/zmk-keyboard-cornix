@@ -100,14 +100,40 @@
             compatible = "zmk,behavior-sticky-key";
             #binding-cells = <1>;
             bindings = <&kp>;
-            release-after-ms = <200>;
+            release-after-ms = <3000>;
             ignore-modifiers;
+        };
+
+        kt_on: key_toggle_on_only {
+            compatible = "zmk,behavior-key-toggle";
+            #binding-cells = <1>;
+            display-name = "Key Toggle On";
+            toggle-mode = "on";
+        };
+
+        kt_off: key_toggle_off_only {
+            compatible = "zmk,behavior-key-toggle";
+            #binding-cells = <1>;
+            display-name = "Key Toggle On";
+            toggle-mode = "on";
         };
 
         rot_long: rot_long {
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
             bindings = <&sks>, <&sks>;
+        };
+
+        rot_long_right: rot_long_right {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&change_direction L SEMICOLON>, <&change_direction SEMICOLON L>;
+        };
+
+        rot_long_left: rot_long_left {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&change_direction A S>, <&change_direction S A>;
         };
 
         rot_mmv: rot_mmv {
@@ -215,9 +241,20 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press &only_one_c &kp RSHFT>
-                , <&macro_press>
                 , <&macro_pause_for_release>
                 , <&macro_release &only_one_c &kp RSHFT>
+                ;
+        };
+        
+        change_direction: change_direction {
+            label = "CHANGE_DIRECTION";
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings =
+                <&macro_param_2to1>
+                , <&macro_release &kp 0>
+                , <&macro_param_1to1>
+                , <&macro_tap &sks 0>
                 ;
         };
 
@@ -406,7 +443,7 @@
                 &kp F  &kp F &kp F &kp D &kp D &kp D   &none &none &kp K &kp K &kp K &kp J &kp J &kp J
                 &kp ENTER &kp ENTER &kp ENTER &none &none &none                &none &none &none &kp ENTER &kp ENTER &kp ENTER 
             >;
-            sensor-bindings = <&rot_long A S &rot_long L SEMICOLON>;
+            sensor-bindings = <&rot_long_left &rot_long_right>;
         };
 
         /* Layer 7: MOUSE2 */
