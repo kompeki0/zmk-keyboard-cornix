@@ -143,6 +143,7 @@
             #binding-cells = <1>;
             bindings = <&kp>;
             release-after-ms = <100>;
+            quick-release;
             ignore-modifiers;
         };
 
@@ -363,7 +364,6 @@
                 , <&macro_press &kt_off 0>
                 , <&macro_param_1to1>
                 , <&macro_press &kt_on 0>
-                , <&macro_wait_time 200>
                 , <&macro_param_1to1>
                 , <&macro_press &kt_off 0>
                 ;
@@ -483,6 +483,7 @@
                 /* row4 (12) */
                 &none         &mo FUNCTION  &kp LALT  &kp LCTRL  &lt NUMBER  TAB   &kp RCMD   &kp BSPC  &lt NUMBER SPACE   &kp ENTER  &kp RCTRL  &kp ESC   &none
             >;
+            sensor-bindings = <&rot_long L SEMICOLON &rot_long A S>;
         };
 
         /* Layer 1: CONTROL */
