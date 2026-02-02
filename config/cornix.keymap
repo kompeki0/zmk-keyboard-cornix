@@ -557,7 +557,7 @@
             bindings = <
                 &sdvx_c &sdvx_c &sdvx_c &sdvx_c &sdvx_c &sdvx_c              &sdvx_m &sdvx_m &sdvx_m &sdvx_m &sdvx_m &sdvx_m
                 &sdvx_f  &sdvx_f &sdvx_f  &sdvx_d &sdvx_d &sdvx_d              &sdvx_k &sdvx_k &sdvx_k  &sdvx_j &sdvx_j &sdvx_j
-                &sdvx_f  &sdvx_f &sdvx_f &sdvx_d &sdvx_d &sdvx_d   &none &none &sdvx_k &sdvx_k &sdvx_k &sdvx_j &sdvx_j &sdvx_j
+                &sdvx_f  &sdvx_f &sdvx_f &sdvx_d &sdvx_d &sdvx_d   &kp LSHFT &kp RSHFT &sdvx_k &sdvx_k &sdvx_k &sdvx_j &sdvx_j &sdvx_j
                 &sdvx_start &sdvx_start &sdvx_start &none &none &none                &none &none &none &sdvx_start &sdvx_start &sdvx_start 
             >;
             sensor-bindings = <&rot_long_left &rot_long_right>;
