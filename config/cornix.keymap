@@ -364,6 +364,8 @@
                 , <&macro_param_1to1>
                 , <&macro_press &kt_on 0>
                 , <&macro_wait_time 200>
+                , <&macro_param_1to1>
+                , <&macro_press &kt_off 0>
                 ;
         };
 
