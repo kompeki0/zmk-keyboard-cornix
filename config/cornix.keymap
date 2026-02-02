@@ -23,7 +23,7 @@
 #define ARROW 4
 #define FUNCTION 5
 #define SDVX 6
-#define MOUSE2 7
+#define SDVX2 7
 #define MOUSE3 8
 #define MOUSE4 9
 #define FPS 10
@@ -549,7 +549,7 @@
             label = "FUNCTION";
             bindings = <
                 &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4   &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &none
-                &none  &to DEFAULT_WIN &to SDVX     &trans        &trans        &bt BT_CLR      &kp F6  &kp F7  &kp F8  &kp F9  &kp F10 &none
+                &none  &to DEFAULT_WIN &to SDVX     &to SDVX2        &trans        &bt BT_CLR      &kp F6  &kp F7  &kp F8  &kp F9  &kp F10 &none
                 &none  &trans        &trans        &trans        &trans        &bt BT_CLR_ALL  &none  &none  &kp F11 &kp F12 &trans  &trans  &trans &none
                 &none  &trans        &trans        &trans        &trans        &trans          &kp DEL &trans  &trans  &trans  &trans  &none
             >;
@@ -570,13 +570,15 @@
 
         /* Layer 7: MOUSE2 */
         layer7 {
-            label = "MOUSE2";
+            label = "SDVX2";
             bindings = <
-                &none  &kp LALT     &kp LG(TAB)  &kp LG(E)        &kp LG(D)       &trans      &mo MOUSE4       &click_and_exit2   &mkp MB3        &mkp MB2         &kp RALT      &none
-                &none  &kp LSHFT    &trans       &trans           &kp LS(LG(S))   &trans      &mkp MB1         &kp C_AC_BACK      &kp C_AC_REFRESH &kp C_AC_FORWARD &to DEFAULT_WIN &none
-                &none  &trans       &trans       &trans           &trans          &trans      &none &none &trans               &trans           &trans          &trans          &trans         &none
-                &none  &kp LSHFT    &trans       &trans           &kp LALT         &kp LSHFT   &kp LSHFT        &kp LCTRL          &kp RALT         &to DEFAULT_WIN  &kp RALT       &none
+                &none &none  &kp C  &kp C  &kp C  &none             &none &kp M &kp M &kp M &none &none
+                &kp F  &kp F &none  &kp D &kp D &none               &none &kp K &kp K &none &kp J &kp J
+                &kp F  &kp F &none &kp D &kp D &none   &none &none &none &kp K &kp K &none &kp J &kp J
+                &kp ENTER &kp ENTER &kp ENTER &none &none &none                &none &none &none &kp ENTER &kp ENTER &kp ENTER 
             >;
+            //sensor-bindings = <&rot_long_left &rot_long_right>;
+            sensor-bindings = <&rot_long A S &rot_long L SEMICOLON>;
         };
 
         /* Layer 8: MOUSE3 */
