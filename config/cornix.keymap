@@ -96,6 +96,41 @@
             mods = <(MOD_RSFT)>;
         };
 
+        sdvx_m: sdvx_m {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&trig_m>, <&none>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        sdvx_j: sdvx_j {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&trig_j>, <&none>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        sdvx_k: sdvx_k {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&trig_k>, <&none>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        sdvx_d: sdvx_d {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&trig_d>, <&none>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        sdvx_f: sdvx_f {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&trig_f>, <&none>;
+            mods = <(MOD_RSFT)>;
+        };
+
         sks: sticky_key_short {
             compatible = "zmk,behavior-sticky-key";
             #binding-cells = <1>;
@@ -240,9 +275,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press &kp C &kp RSHFT>
+                <&macro_tap &kt_on C &kt_on RSHFT>
                 , <&macro_pause_for_release>
-                , <&macro_release &kp C &kp RSHFT>
+                , <&macro_tap &kt_off C &kt_off RSHFT>
                 ;
         };
 
