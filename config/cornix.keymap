@@ -332,6 +332,12 @@
         bindings = <&to DEFAULT_WIN>;
         layers = <SDVX SDVX2>;
     };
+    sdvx_start {
+        timeout-ms = <50>;
+        key-positions = <43 44>;      // RH1(SPACE)=45, RH2(ENTER)=46
+        bindings = <&to DEFAULT_WIN>;
+        layers = <SDVX2>;
+    };
     };
 
 
@@ -446,10 +452,10 @@
         layer7 {
             label = "SDVX2";
             bindings = <
-                &sks C  &sks C  &sks C  &sks C  &sks C  &sks C             &sks M &sks M &sks M &sks M &sks M &sks M
-                &sks F  &sks F &sks F  &sks D &sks D &sks D               &sks K &sks K &sks K &sks J &sks J &sks J
-                &sks F  &sks F &sks F &sks D &sks D &sks D   &none &none &sks K &sks K &sks K &sks J &sks J &sks J
-                &sks ENTER &sks ENTER &sks ENTER &none &none &none                &none &none &none &sks ENTER &sks ENTER &sks ENTER 
+                &kp C  &kp C  &kp C  &kp D &kp D &kp D             &kp K &kp K &kp K &kp M &kp M &kp M
+                &kp F  &kp F &kp F  &kp D &kp D &kp D               &kp K &kp K &kp K &kp J &kp J &kp J
+                &kp F  &kp F &kp F &kp D &kp D &kp D   &none &none &kp K &kp K &kp K &kp J &kp J &kp J
+                &kp F  &kp F &kp F &kp ENTER &kp ENTER &kp ENTER                &kp ENTER &kp ENTER &kp ENTER &kp J &kp J &kp J 
             >;
             //sensor-bindings = <&rot_long_left &rot_long_right>;
             sensor-bindings = <&rot_long A S &rot_long L SEMICOLON>;
