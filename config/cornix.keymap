@@ -131,6 +131,7 @@
         };
         enc_hold: enc_hold {
             compatible = "zmk,behavior-sensor-hold-rotate";
+            #sensor-binding-cells = <0>;
             timeout-ms = <200>;
             bindings = <&kp A &kp S>;
         };
