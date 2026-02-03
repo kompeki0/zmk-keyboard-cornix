@@ -334,8 +334,8 @@
     };
     sdvx_start {
         timeout-ms = <50>;
-        key-positions = <43 44>;      // RH1(SPACE)=45, RH2(ENTER)=46
-        bindings = <&to DEFAULT_WIN>;
+        key-positions = <38 49>;      // RH1(SPACE)=45, RH2(ENTER)=46
+        bindings = <&kp ENTER>;
         layers = <SDVX2>;
     };
     };
@@ -363,7 +363,6 @@
                 /* row4 (12) */
                 &none         &mo FUNCTION  &kp LALT  &kp LCTRL  &lt NUMBER  TAB   &kp RCMD   &kp BSPC  &lt NUMBER SPACE   &kp ENTER  &kp RCTRL  &kp ESC   &none
             >;
-            sensor-bindings = <&rot_long L SEMICOLON &rot_long A S>;
         };
 
         /* Layer 1: CONTROL */
