@@ -459,8 +459,7 @@
                 &rck F  &rck F &rck F &rck D &rck D &rck D   &none &none &rck K &rck K &rck K &rck J &rck J &rck J
                 &rck ENTER &rck ENTER &rck ENTER &none &none &none                &none &none &none &rck ENTER &rck ENTER &rck ENTER 
             >;
-            //sensor-bindings = <&rot_long_left &rot_long_right>;
-            sensor-bindings = <&rot_long A S &rot_long L SEMICOLON>;
+            sensor-bindings = <&enc_hold_l &enc_hold_r>;
         };
 
         /* Layer 7: MOUSE2 */
