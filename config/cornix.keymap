@@ -446,10 +446,10 @@
         layer7 {
             label = "SDVX2";
             bindings = <
-                &none &none  &kp C  &kp C  &kp C  &none             &none &kp M &kp M &kp M &none &none
-                &kp F  &kp F &none  &kp D &kp D &none               &none &kp K &kp K &none &kp J &kp J
-                &kp F  &kp F &none &kp D &kp D &none   &none &none &none &kp K &kp K &none &kp J &kp J
-                &kp ENTER &kp ENTER &kp ENTER &none &none &none                &none &none &none &kp ENTER &kp ENTER &kp ENTER 
+                &sks C  &sks C  &sks C  &sks C  &sks C  &sks C             &sks M &sks M &sks M &sks M &sks M &sks M
+                &sks F  &sks F &sks F  &sks D &sks D &sks D               &sks K &sks K &sks K &sks J &sks J &sks J
+                &sks F  &sks F &sks F &sks D &sks D &sks D   &none &none &sks K &sks K &sks K &sks J &sks J &sks J
+                &sks ENTER &sks ENTER &sks ENTER &none &none &none                &none &none &none &sks ENTER &sks ENTER &sks ENTER 
             >;
             //sensor-bindings = <&rot_long_left &rot_long_right>;
             sensor-bindings = <&rot_long A S &rot_long L SEMICOLON>;
