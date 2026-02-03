@@ -135,6 +135,11 @@
             #sensor-binding-cells = <2>;
             bindings = <&mmv>, <&mmv>;
         };
+
+        rk: rk {
+            compatible = "zmk,behavior-refcount-key";
+            #binding-cells = <1>;
+        };
     };
 
     macros {
@@ -352,7 +357,7 @@
         default_layer {
             bindings = <
                 /* row1 (12) */
-                &none         &kp Q      &kp W     &kp E     &kp R        &kp T      &kp Y     &kp U        &kp I      &kp O      &kp P      &none
+                &rk A         &kp Q      &kp W     &kp E     &kp R        &kp T      &kp Y     &kp U        &kp I      &kp O      &kp P      &none
 
                 /* row2 (12) */
                 &none         &lt CONTROL A      &kp S     &kp D     &kp F        &kp G      &kp H     &kp J        &kp K      &kp L      &lt ARROW SPACE   &mo MOUSE
