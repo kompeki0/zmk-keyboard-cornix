@@ -324,13 +324,13 @@
         timeout-ms = <50>;
         key-positions = <43 44>;      // RH1(SPACE)=45, RH2(ENTER)=46
         bindings = <&kp ESC>;
-        layers = <SDVX,SDVX2>;
+        layers = <SDVX SDVX2>;
     };
     sdvx_end {
         timeout-ms = <50>;
         key-positions = <41 46>;      // RH1(SPACE)=45, RH2(ENTER)=46
         bindings = <&to DEFAULT_WIN>;
-        layers = <SDVX,SDVX2>;
+        layers = <SDVX SDVX2>;
     };
     };
 
