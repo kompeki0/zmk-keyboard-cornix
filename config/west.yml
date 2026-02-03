@@ -8,6 +8,8 @@ manifest:
       url-base: https://github.com/urob
     - name: janpfischer
       url-base: https://github.com/janpfischer
+    - name: kompeki0
+      url-base: https://github.com/kompeki0
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -31,5 +33,9 @@ manifest:
     #  remote: janpfischer
     #  revision: main
     #  clone-depth: 1
+    - name: zmk-cornix-for-sdvx
+      remote: kompeki0
+      revision: main
+      clone-depth: 1
   self:
     path: config
