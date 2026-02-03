@@ -136,7 +136,7 @@
             bindings = <&mmv>, <&mmv>;
         };
 
-        rk: rk {
+        rck: refcount_key {
             compatible = "zmk,behavior-refcount-key";
             #binding-cells = <1>;
         };
@@ -357,7 +357,7 @@
         default_layer {
             bindings = <
                 /* row1 (12) */
-                &rk A         &kp Q      &kp W     &kp E     &kp R        &kp T      &kp Y     &kp U        &kp I      &kp O      &kp P      &none
+                &none         &kp Q      &kp W     &kp E     &kp R        &kp T      &kp Y     &kp U        &kp I      &kp O      &kp P      &none
 
                 /* row2 (12) */
                 &none         &lt CONTROL A      &kp S     &kp D     &kp F        &kp G      &kp H     &kp J        &kp K      &kp L      &lt ARROW SPACE   &mo MOUSE
@@ -443,10 +443,10 @@
         layer6 {
             label = "SDVX";
             bindings = <
-                &kp C  &kp C  &kp C  &kp C  &kp C  &kp C             &kp M &kp M &kp M &kp M &kp M &kp M
-                &kp F  &kp F &kp F  &kp D &kp D &kp D               &kp K &kp K &kp K &kp J &kp J &kp J
-                &kp F  &kp F &kp F &kp D &kp D &kp D   &none &none &kp K &kp K &kp K &kp J &kp J &kp J
-                &kp ENTER &kp ENTER &kp ENTER &none &none &none                &none &none &none &kp ENTER &kp ENTER &kp ENTER 
+                &rck C  &rck C  &rck C  &rck C  &rck C  &rck C             &rck M &rck M &rck M &rck M &rck M &rck M
+                &rck F  &rck F &rck F  &rck D &rck D &rck D               &rck K &rck K &rck K &rck J &rck J &rck J
+                &rck F  &rck F &rck F &rck D &rck D &rck D   &none &none &rck K &rck K &rck K &rck J &rck J &rck J
+                &rck ENTER &rck ENTER &rck ENTER &none &none &none                &none &none &none &rck ENTER &rck ENTER &rck ENTER 
             >;
             //sensor-bindings = <&rot_long_left &rot_long_right>;
             sensor-bindings = <&rot_long A S &rot_long L SEMICOLON>;
