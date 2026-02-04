@@ -180,8 +180,6 @@
             step = <5>;
             ticks-per-step = <5>;
         };
-
-
     };
 
     macros {
@@ -406,7 +404,7 @@
 
                 /* row3 (14) : keep center 2x &none */
                 &none         &long_mt LSHFT Z      &kp X     &kp C     &kp V        &kp B      &none  &none  &kp N     &kp M        &kp COMMA  &mt LCTRL DOT    &kp RSHFT  &none
-e
+
                 /* row4 (12) */
                 &none         &mo FUNCTION  &kp LALT  &kp LCTRL  &lt NUMBER  TAB   &kp RCMD   &kp BSPC  &lt NUMBER SPACE   &kp ENTER  &kp RCTRL  &kp ESC   &none
             >;
