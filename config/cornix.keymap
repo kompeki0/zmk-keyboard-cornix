@@ -172,7 +172,7 @@
             compatible = "zmk,behavior-sensor-value-adjust";
             #sensor-binding-cells = <0>;
 
-            bindings = <&none>;
+            binding = <&left_encoder>;
             index = <0>;
             min = <0>;
             max = <100>;
