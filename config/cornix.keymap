@@ -158,10 +158,14 @@
 
             timeout-ms = <250>;
             step-group-size = <5>;
-            direction-hold-mode = <1>; // 1=STICKY
+            direction-hold-mode = <1>;
 
-            hold-bindings = <&kp LALT &kp LALT>;
-            step-bindings = <&kp TAB  &kp LS(TAB)>;
+            bindings = <
+                &kp LALT   /* hold_cw  */
+                &kp LALT   /* hold_ccw */
+                &kp TAB    /* step_cw  */
+                &kp LS(TAB)    /* step_ccw */
+            >;
         };
     };
 
