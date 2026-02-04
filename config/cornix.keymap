@@ -183,7 +183,6 @@
 
         mmv_dyn: mmv_dyn {
             compatible = "zmk,behavior-mouse-move-dynamic";
-            #binding-cells = <2>;
 
             binding = <&mmv>;
 
