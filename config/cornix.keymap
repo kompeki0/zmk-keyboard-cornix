@@ -151,6 +151,18 @@
             compatible = "zmk,behavior-refcount-key";
             #binding-cells = <1>;
         };
+
+        enc_alt_tab: enc_alt_tab {
+            compatible = "zmk,behavior-sensor-hold-step-rotate";
+            #sensor-binding-cells = <0>;
+
+            timeout-ms = <250>;
+            step-group-size = <5>;
+            direction-hold-mode = <1>; // 1=STICKY
+
+            hold-bindings = <&kp LALT &kp LALT>;
+            step-bindings = <&kp TAB  &kp LS(TAB)>;
+        };
     };
 
     macros {
@@ -379,6 +391,7 @@
                 /* row4 (12) */
                 &none         &mo FUNCTION  &kp LALT  &kp LCTRL  &lt NUMBER  TAB   &kp RCMD   &kp BSPC  &lt NUMBER SPACE   &kp ENTER  &kp RCTRL  &kp ESC   &none
             >;
+            sensor-bindings = <&enc_alt_tab &enc_alt_tab>;
         };
 
         /* Layer 1: CONTROL */
