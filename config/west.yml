@@ -37,5 +37,9 @@ manifest:
       remote: kompeki0
       revision: main
       clone-depth: 1
+    - name: zmk-rotation-value-change
+      remote: kompeki0
+      revision: main
+      clone-depth: 1
   self:
     path: config
