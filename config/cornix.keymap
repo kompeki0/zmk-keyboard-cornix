@@ -180,6 +180,19 @@
             step = <5>;
             ticks-per-step = <5>;
         };
+
+        mmv_dyn: mmv_dyn {
+            compatible = "zmk,behavior-mouse-move-dynamic";
+            #binding-cells = <2>;
+
+            binding = <&mmv>;
+
+            value-min = <0>;
+            value-max = <100>;
+            min-vel = <200>;
+            max-vel = <1800>;
+            poll-ms = <40>;
+        };
     };
 
     macros {
@@ -440,15 +453,14 @@
 
         // ★追加：左右エンコーダの割り当て（左=X、右=Y）
         // 左: CW→右, CCW→左 / 右: CW→下, CCW→上
-        sensor-bindings =
-            <&rot_mmv MOVE_RIGHT MOVE_LEFT   &rot_mmv MOVE_DOWN MOVE_UP>;
+        sensor-bindings = <&enc_val0 &enc_val0>;
 
         bindings = <
             /* row1 (12) */
-            &none      &trans      &trans          &mmv MOVE_UP          &trans        &trans      &trans        &trans          &trans        &trans        &trans     &none
+            &none      &trans      &trans          &mmv_dyn MOVE_UP 0         &trans        &trans      &trans        &trans          &trans        &trans        &trans     &none
 
             /* row2 (12) */
-            &none      &trans      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT      &trans      &mkp LCLK     &mkp RCLK        &mkp MCLK     &trans        &trans     &none
+            &none      &trans      &mmv_dyn MOVE_LEFT 0 &mmv_dyn MOVE_DOWN 0 &mmv_dyn MOVE_RIGHT 0     &trans        &trans      &mkp LCLK     &mkp RCLK        &mkp MCLK     &trans       &none
 
             /* row3 (14) */
             &none      &trans      &trans        &trans        &trans        &trans      &none  &none  &trans        &trans        &trans        &trans      &trans     &none
