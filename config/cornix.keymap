@@ -457,10 +457,10 @@
 
         bindings = <
             /* row1 (12) */
-            &none      &trans      &trans          &mmv_dyn MOVE_UP        &trans        &trans      &trans        &trans          &trans        &trans        &trans     &none
+            &none      &trans      &trans          &mmv_dyn0 MOVE_UP        &trans        &trans      &trans        &trans          &trans        &trans        &trans     &none
 
             /* row2 (12) */
-            &none      &trans      &mmv_dyn MOVE_LEFT &mmv_dyn MOVE_DOWN &mmv_dyn MOVE_RIGHT     &trans        &trans      &mkp LCLK     &mkp RCLK        &mkp MCLK     &trans       &none
+            &none      &trans      &mmv_dyn0 MOVE_LEFT &mmv_dyn0 MOVE_DOWN &mmv_dyn0 MOVE_RIGHT     &trans        &trans      &mkp LCLK     &mkp RCLK        &mkp MCLK     &trans       &none
 
             /* row3 (14) */
             &none      &trans      &trans        &trans        &trans        &trans      &none  &none  &trans        &trans        &trans        &trans      &trans     &none
