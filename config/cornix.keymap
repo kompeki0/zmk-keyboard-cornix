@@ -156,7 +156,7 @@
             compatible = "zmk,behavior-sensor-hold-step-rotate";
             #sensor-binding-cells = <0>;
 
-            timeout-ms = <250>;
+            timeout-ms = <1000>;
             step-group-size = <5>;
             direction-hold-mode = <1>;
 
