@@ -181,18 +181,18 @@
             ticks-per-step = <5>;
         };
 
-        mmv_dyn0: mmv_dyn0 {
-            compatible = "zmk,behavior-mouse-move-dynamic";
+        mmv_val0: mmv_val0 {
+            compatible = "zmk,behavior-mouse-move-value";
             #binding-cells = <1>;
-            binding = <&mmv>;
-            index = <0>;
 
+            index = <0>;
             value-min = <0>;
             value-max = <100>;
-            min-vel = <200>;
-            max-vel = <1800>;
-            poll-ms = <40>;
+            min-speed = <200>;
+            max-speed = <1800>;
+            trigger-period-ms = <20>;
         };
+
 
         enc_mmv_hold_l: enc_mmv_hold_l {
             compatible = "zmk,behavior-sensor-hold-rotate";
@@ -472,10 +472,10 @@
 
         bindings = <
             /* row1 (12) */
-            &none      &trans      &trans          &mmv_dyn0 MOVE_UP        &trans        &trans      &trans        &trans          &trans        &trans        &trans     &none
+            &none      &trans      &trans          &mmv_val0 MOVE_UP        &trans        &trans      &trans        &trans          &trans        &trans        &trans     &none
 
             /* row2 (12) */
-            &none      &trans      &mmv_dyn0 MOVE_LEFT &mmv_dyn0 MOVE_DOWN &mmv_dyn0 MOVE_RIGHT     &trans        &trans      &mkp LCLK     &mkp MCLK        &mkp RCLK     &trans       &none
+            &none      &trans      &mmv_val0 MOVE_LEFT &mmv_val0 MOVE_DOWN &mmv_val0 MOVE_RIGHT     &trans        &trans      &mkp LCLK     &mkp MCLK        &mkp RCLK     &trans       &none
 
             /* row3 (14) */
             &none      &trans      &trans        &trans        &trans        &trans      &none  &none  &trans        &trans        &trans        &trans      &trans     &none
