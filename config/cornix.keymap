@@ -184,12 +184,14 @@
         mmv_val0: mmv_val0 {
             compatible = "zmk,behavior-mouse-move-value";
             #binding-cells = <1>;
+            binding = <&mmv>;
             index = <0>;
+
             value-min = <0>;
             value-max = <100>;
             min-speed = <200>;
             max-speed = <1800>;
-            trigger-period-ms = <20>;
+            trigger-period-ms = <40>;
         };
 
         mmv_fix: mmv_fix {
