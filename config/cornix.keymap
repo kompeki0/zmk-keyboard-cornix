@@ -178,7 +178,7 @@
             min = <0>;
             max = <100>;
             step = <5>;
-            ticks-per-step = <5>;
+            ticks-per-step = <1>;
         };
 
         mmv_val0: mmv_val0 {
@@ -190,7 +190,7 @@
             value-min = <0>;
             value-max = <100>;
             min-speed = <200>;
-            max-speed = <4000>;
+            max-speed = <3000>;
             trigger-period-ms = <40>;
         };
 
