@@ -184,7 +184,6 @@
         mmv_val0: mmv_val0 {
             compatible = "zmk,behavior-mouse-move-value";
             #binding-cells = <1>;
-
             index = <0>;
             value-min = <0>;
             value-max = <100>;
@@ -192,6 +191,14 @@
             max-speed = <1800>;
             trigger-period-ms = <20>;
         };
+
+        mmv_fix: mmv_fix {
+            compatible = "zmk,behavior-mouse-move-fixed";
+            #binding-cells = <1>;
+            speed = <1200>;
+            trigger-period-ms = <20>;
+        };
+
 
 
         enc_mmv_hold_l: enc_mmv_hold_l {
@@ -481,7 +488,7 @@
             &none      &trans      &trans        &trans        &trans        &trans      &none  &none  &trans        &trans        &trans        &trans      &trans     &none
 
             /* row4 (12) */
-            &none      &to DEFAULT_WIN  &trans    &trans        &trans        &trans      &trans        &trans          &trans        &trans        &trans     &none
+            &none      &to DEFAULT_WIN  &trans    &mmv_fix MOVE_LEFT        &mmv_fix MOVE_DOWN &mmv_fix MOVE_RIGHT      &trans        &trans          &trans        &trans        &trans     &none
         >;
         };
 
