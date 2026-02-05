@@ -484,7 +484,7 @@
             &none      &trans      &trans          &mmv_val0 MOVE_UP        &trans        &trans      &trans        &trans          &trans        &trans        &trans     &none
 
             /* row2 (12) */
-            &none      &trans      &mmv_val0 MOVE_LEFT &mmv_val0 MOVE_DOWN &mmv_val0 MOVE_RIGHT     &trans        &trans      &mkp LCLK     &mkp MCLK        &mkp RCLK     &trans       &none
+            &none      &trans      &mmv_val0 MOVE_LEFT &mmv_val0 MOVE_DOWN &mmv_val0 MOVE_RIGHT     &mkp LCLK        &trans      &mkp LCLK     &mkp MCLK        &mkp RCLK     &trans       &none
 
             /* row3 (14) */
             &none      &trans      &trans        &trans        &trans        &trans      &none  &none  &trans        &trans        &trans        &trans      &trans     &none
