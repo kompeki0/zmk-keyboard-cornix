@@ -194,6 +194,20 @@
             poll-ms = <40>;
         };
 
+        enc_mmv_hold_l: enc_mmv_hold_l {
+            compatible = "zmk,behavior-sensor-hold-rotate";
+            #sensor-binding-cells = <0>;
+            timeout-ms = <60>;              // ここは好み
+            bindings = <&mmv MOVE_RIGHT &mmv MOVE_LEFT>;
+        };
+
+        enc_mmv_hold_r: enc_mmv_hold_r {
+            compatible = "zmk,behavior-sensor-hold-rotate";
+            #sensor-binding-cells = <0>;
+            timeout-ms = <60>;
+            bindings = <&mmv MOVE_DOWN &mmv MOVE_UP>;
+        };
+
     };
 
     macros {
@@ -422,7 +436,7 @@
                 /* row4 (12) */
                 &none         &mo FUNCTION  &kp LALT  &kp LCTRL  &lt NUMBER  TAB   &kp RCMD   &kp BSPC  &lt NUMBER SPACE   &kp ENTER  &kp RCTRL  &kp ESC   &none
             >;
-            sensor-bindings = <&enc_val0 &enc_alt_tab>;
+            sensor-bindings = <&enc_mmv_hold_l &enc_mmv_hold_r>;
         };
 
         /* Layer 1: CONTROL */
