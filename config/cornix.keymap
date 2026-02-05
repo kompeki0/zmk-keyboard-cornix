@@ -190,7 +190,7 @@
             value-min = <0>;
             value-max = <100>;
             min-speed = <200>;
-            max-speed = <1800>;
+            max-speed = <4000>;
             trigger-period-ms = <40>;
         };
 
