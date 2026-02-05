@@ -178,7 +178,7 @@
             min = <0>;
             max = <100>;
             step = <5>;
-            ticks-per-step = <1>;
+            ticks-per-step = <2>;
         };
 
         mmv_val0: mmv_val0 {
@@ -445,7 +445,7 @@
                 /* row4 (12) */
                 &none         &mo FUNCTION  &kp LALT  &kp LCTRL  &lt NUMBER  TAB   &kp RCMD   &kp BSPC  &lt NUMBER SPACE   &kp ENTER  &kp RCTRL  &kp ESC   &none
             >;
-            sensor-bindings = <&enc_mmv_hold_l &enc_mmv_hold_r>;
+            sensor-bindings = <&enc_alt_tab &enc_alt_tab>;
         };
 
         /* Layer 1: CONTROL */
@@ -477,20 +477,20 @@
 
         // ★追加：左右エンコーダの割り当て（左=X、右=Y）
         // 左: CW→右, CCW→左 / 右: CW→下, CCW→上
-        sensor-bindings = <&enc_val0 &enc_val0>;
+        sensor-bindings = <&inc_dec_kp PG_UP PG_DN &enc_val0>;
 
         bindings = <
             /* row1 (12) */
-            &none      &trans      &trans          &mmv_val0 MOVE_UP        &trans        &trans      &trans        &trans          &trans        &trans        &trans     &none
+            &none      &trans      &kp LG(TAB)           &mmv_val0 MOVE_UP        &trans        &trans      &trans        &trans          &trans        &trans        &trans     &none
 
             /* row2 (12) */
-            &none      &trans      &mmv_val0 MOVE_LEFT &mmv_val0 MOVE_DOWN &mmv_val0 MOVE_RIGHT     &mkp LCLK        &trans      &mkp LCLK     &mkp MCLK        &mkp RCLK     &trans       &none
+            &none      &trans      &mmv_val0 MOVE_LEFT &mmv_val0 MOVE_DOWN &mmv_val0 MOVE_RIGHT     &trans   &trans      &mkp LCLK     &mkp MCLK        &mkp RCLK     &trans       &none
 
             /* row3 (14) */
-            &none      &trans      &trans        &trans        &trans        &trans      &none  &none  &trans        &trans        &trans        &trans      &trans     &none
+            &none      &trans      &trans        &trans        &trans        &trans      &none  &mkp LCLK  &trans        &kp C_AC_BACK       &kp C_AC_REFRESH    &kp C_AC_FORWARD      &trans     &none
 
             /* row4 (12) */
-            &none      &to DEFAULT_WIN  &trans    &mmv_fix MOVE_LEFT        &mmv_fix MOVE_DOWN &mmv_fix MOVE_RIGHT      &trans        &trans          &trans        &trans        &trans     &none
+            &none      &to DEFAULT_WIN  &trans    &trans &trans &trans      &trans        &trans          &trans        &trans        &trans     &none
         >;
         };
 
