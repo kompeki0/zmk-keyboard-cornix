@@ -445,7 +445,7 @@
                 &none         &lt CONTROL A      &kp S     &kp D     &kp F        &kp G      &kp H     &kp J        &kp K      &kp L      &lt ARROW SPACE   &to MOUSE
 
                 /* row3 (14) : keep center 2x &none */
-                &none         &long_mt LSHFT Z      &kp X     &kp C     &kp V        &kp B      &none  &none  &kp N     &kp M        &kp COMMA  &mt LCTRL DOT    &kp RSHFT  &none
+                &none         &long_mt LSHFT Z      &kp X     &kp C     &kp V        &kp B      &none  &kp ENTER  &kp N     &kp M        &kp COMMA  &mt LCTRL DOT    &kp RSHFT  &none
 
                 /* row4 (12) */
                 &none         &mo FUNCTION  &kp LALT  &kp LCTRL  &lt NUMBER  TAB   &kp RCMD   &kp BSPC  &lt NUMBER SPACE   &kp ENTER  &kp RCTRL  &kp ESC   &none
