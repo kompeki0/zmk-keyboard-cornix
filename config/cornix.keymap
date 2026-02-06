@@ -160,6 +160,11 @@
             step-group-size = <5>;
             direction-hold-mode = <1>;
 
+            quick-release;
+            quick-release-allow-list = <LALT TAB LSHFT>;
+
+            layers= <0>
+
             bindings = <
                 &kp LALT   /* hold_cw  */
                 &kp LALT   /* hold_ccw */
@@ -484,7 +489,7 @@
             &none      &trans      &kp LG(TAB)           &mmv_val0 MOVE_UP        &trans        &trans      &trans        &trans          &trans        &trans        &trans     &none
 
             /* row2 (12) */
-            &none      &trans      &mmv_val0 MOVE_LEFT &mmv_val0 MOVE_DOWN &mmv_val0 MOVE_RIGHT     &trans   &trans      &mkp LCLK     &mkp MCLK        &mkp RCLK     &trans       &none
+            &none      &to DEFAULT_WIN      &mmv_val0 MOVE_LEFT &mmv_val0 MOVE_DOWN &mmv_val0 MOVE_RIGHT     &trans   &trans      &mkp LCLK     &mkp MCLK        &mkp RCLK     &to DEFAULT_WIN       &none
 
             /* row3 (14) */
             &none      &trans      &trans        &trans        &trans        &trans      &none  &mkp LCLK  &trans        &kp C_AC_BACK       &kp C_AC_REFRESH    &kp C_AC_FORWARD      &trans     &none
