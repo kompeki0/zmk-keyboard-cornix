@@ -163,7 +163,7 @@
             quick-release;
             quick-release-allow-list = <LALT TAB LS(TAB)>;
 
-            layers= <0>;
+            require-top-layer;
 
             bindings = <
                 &kp LALT   /* hold_cw  */
