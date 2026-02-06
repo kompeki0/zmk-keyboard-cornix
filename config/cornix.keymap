@@ -142,8 +142,9 @@
             bindings = <&kp L &kp SEMICOLON>;
         };
         rot_scroll: rot_scroll {
-            compatible = "zmk,behavior-sensor-rotate";
+            compatible = "zmk,behavior-sensor-hold-rotat";
             #sensor-binding-cells = <0>;
+            timeout-ms = <200>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
         };
 
