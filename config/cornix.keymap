@@ -161,7 +161,7 @@
             direction-hold-mode = <1>;
 
             quick-release;
-            quick-release-allowed-list = <LALT TAB LSHFT>;
+            quick-release-allow-list = <LALT TAB LSHFT>;
 
             layers= <0>;
 
