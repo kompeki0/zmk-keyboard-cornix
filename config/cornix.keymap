@@ -228,6 +228,14 @@
             axis = <0>;          // vertical
         };
 
+        scroll1: scroll1 {
+            compatible = "zmk,behavior-input-one-shot-two-axis";
+            #binding-cells = <1>;
+            x-input-code = <INPUT_REL_HWHEEL>;
+            y-input-code = <INPUT_REL_WHEEL>;
+            scale = <1>;
+        };
+
     };
 
 
@@ -472,7 +480,7 @@
         layer3 {
         label = "MOUSE";
 
-        sensor-bindings = <&enc_scroll_v &enc_val0>;
+        sensor-bindings = <&sensor_rotate &scroll1 SCRL_UP &scroll1 SCRL_DOWN &enc_val0>;
 
         bindings = <
             /* row1 (12) */
