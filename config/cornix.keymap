@@ -205,6 +205,7 @@
 
         scroll_wheel: scroll_wheel {
             compatible = "zmk,behavior-input-two-axis";
+            #binding-cells = <1>;
             x-input-code = <INPUT_REL_HWHEEL>;
             y-input-code = <INPUT_REL_WHEEL>;
             trigger-period-ms = <20>;
