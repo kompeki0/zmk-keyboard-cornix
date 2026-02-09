@@ -203,6 +203,29 @@
             ema-alpha-permil = <300>;
         };
 
+        scroll_wheel: scroll_wheel {
+            compatible = "zmk,behavior-input-two-axis";
+            x-input-code = <INPUT_REL_HWHEEL>;
+            y-input-code = <INPUT_REL_WHEEL>;
+            trigger-period-ms = <20>;
+            time-to-max-speed-ms = <0>;  // 0にすると加速なし（即max）扱いになりやすい
+            // acceleration-exponent = <0>; // 必要なら
+        };
+
+        enc_scroll_v: enc_scroll_v {
+            compatible = "zmk,behavior-sensor-scroll-pulse";
+            #sensor-binding-cells = <0>;
+            binding = <&scroll_wheel>;
+
+            // 体感調整
+            pulse-ms = <35>;     // trigger-period(20)より長め推奨
+            fast-dt-ms = <60>;
+            slow-dt-ms = <250>;
+            min-speed = <3>;
+            max-speed = <18>;
+            axis = <0>;          // vertical
+        };
+
     };
 
 
@@ -447,7 +470,7 @@
         layer3 {
         label = "MOUSE";
 
-        sensor-bindings = <&enc_scroll &enc_val0>;
+        sensor-bindings = <&enc_scroll_v &enc_val0>;
 
         bindings = <
             /* row1 (12) */
