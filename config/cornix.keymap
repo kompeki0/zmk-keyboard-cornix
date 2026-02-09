@@ -216,6 +216,7 @@
             compatible = "zmk,behavior-sensor-scroll-pulse";
             #sensor-binding-cells = <0>;
             binding = <&scroll_wheel>;
+            bindings = <&none &none>;
 
             // 体感調整
             pulse-ms = <35>;     // trigger-period(20)より長め推奨
