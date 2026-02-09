@@ -238,9 +238,7 @@
             trigger-period-ms = <16>;
             time-to-max-speed-ms = <0>;
 
-            oneshot-on-press;
             oneshot-scale = <120>;
-            disable-continuous;  // tap専用
         };
          scroll2: scroll2 {
             compatible = "zmk,behavior-sensor-rotate";
