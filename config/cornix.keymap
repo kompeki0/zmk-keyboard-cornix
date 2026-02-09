@@ -56,6 +56,10 @@
 #define JP_EISU         LANGUAGE_2        // 英数
 #define JP_HANZEN       GRAVE             // 半角/全角
 
+&msc_input_listener {
+    input-processors = <&zip_wheel_scaler 5 1>;
+};
+
 / {
     behaviors {
         sl_mouse: sticky_layer_for_mouse {
@@ -484,9 +488,6 @@
         label = "MOUSE";
 
         sensor-bindings = <&rot_scroll &enc_val0>;
-            &msc_input_listener {
-                input-processors = <&zip_wheel_scaler 5 1>;
-            };
 
         bindings = <
             /* row1 (12) */
