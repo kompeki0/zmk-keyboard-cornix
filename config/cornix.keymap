@@ -189,6 +189,7 @@
         enc_scroll: enc_scroll {
             compatible = "zmk,behavior-sensor-scroll-velocity";
             #sensor-binding-cells = <0>;
+            bindings = <&none &none>;
 
             axis = <0>;            // 0=縦スクロール
             invert = <0>;
