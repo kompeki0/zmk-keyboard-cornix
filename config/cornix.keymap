@@ -57,7 +57,13 @@
 #define JP_HANZEN       GRAVE             // 半角/全角
 
 &msc_input_listener {
-    input-processors = <&zip_scroll_scaler 5 1>;
+    input-processors = <&zip_scroll_scaler 1 1>;
+};
+&msc {
+    x-input-code = <INPUT_REL_HWHEEL>;
+    y-input-code = <INPUT_REL_WHEEL>;
+    time-to-max-speed-ms = <0>;
+    acceleration-exponent = <0>;
 };
 
 / {
@@ -123,10 +129,10 @@
             bindings = <&sks>, <&sks>;
         };
 
-        rot_long_right: rot_long_right {
+        rot_scroll2: rot_scroll2 {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&change_direction L SEMICOLON>, <&change_direction SEMICOLON L>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
         };
 
         rot_long_left: rot_long_left {
@@ -205,12 +211,6 @@
             trigger-period-ms = <40>;
         };
 
-        mmv_fix: mmv_fix {
-            compatible = "zmk,behavior-mouse-move-fixed";
-            #binding-cells = <1>;
-            speed = <1200>;
-            trigger-period-ms = <20>;
-        };
 
 
 
@@ -487,7 +487,7 @@
         layer3 {
         label = "MOUSE";
 
-        sensor-bindings = <&rot_scroll &enc_val0>;
+        sensor-bindings = <&rot_scroll2 &enc_val0>;
 
         bindings = <
             /* row1 (12) */
