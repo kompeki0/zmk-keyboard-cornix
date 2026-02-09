@@ -186,6 +186,22 @@
             trigger-period-ms = <40>;
         };
 
+        enc_scroll: enc_scroll {
+            compatible = "zmk,behavior-sensor-scroll-velocity";
+            #sensor-binding-cells = <0>;
+
+            axis = <0>;            // 0=縦スクロール
+            invert = <0>;
+
+            slow-amount = <1>;     // ゆっくり回すと 1 tick = 1行
+            fast-amount = <8>;     // 速いと 1 tick = 8行
+
+            fast-threshold-ms = <18>;
+            slow-threshold-ms = <160>;
+
+            ema-alpha-permil = <300>;
+        };
+
     };
 
 
@@ -430,7 +446,7 @@
         layer3 {
         label = "MOUSE";
 
-        sensor-bindings = <&rot_scroll2 &enc_val0>;
+        sensor-bindings = <&enc_scroll &enc_val0>;
 
         bindings = <
             /* row1 (12) */
