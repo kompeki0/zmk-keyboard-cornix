@@ -238,7 +238,7 @@
          scroll2: scroll2 {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&scroll1 SCRL_UP>, <&scroll1 SCRL_DOWN>;
+            bindings = <&scroll1 MOVE(0,-1)>, <&scroll1 MOVE(0,1)>;
         };
 
 
@@ -457,7 +457,7 @@
                 /* row4 (12) */
                 &none         &mo FUNCTION  &kp LALT  &kp LCTRL  &lt NUMBER  TAB   &kp RCMD   &kp BSPC  &lt NUMBER SPACE   &kp ENTER  &kp RCTRL  &kp ESC   &none
             >;
-            sensor-bindings = <&enc_alt_tab &enc_alt_tab>;
+            sensor-bindings = <&enc_alt_tab &rot_scroll>;
         };
 
         /* Layer 1: CONTROL */
