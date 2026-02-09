@@ -67,6 +67,13 @@
 };
 
 / {
+
+    scroll1_listener: scroll1_listener {
+        compatible = "zmk,input-listener";
+        status = "okay";
+        device = <&scroll1>;
+    };
+
     behaviors {
         sl_mouse: sticky_layer_for_mouse {
             compatible = "zmk,behavior-sticky-key";
