@@ -235,6 +235,12 @@
             y-input-code = <INPUT_REL_WHEEL>;
             scale = <1>;
         };
+         scroll2: scroll2 {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&scroll1 SCRL_UP>, <&scroll1 SCRL_DOWN>;
+        };
+
 
     };
 
@@ -480,7 +486,7 @@
         layer3 {
         label = "MOUSE";
 
-        sensor-bindings = <&sensor_rotate &scroll1 SCRL_UP &scroll1 SCRL_DOWN &enc_val0>;
+        sensor-bindings = <&scroll2 &enc_val0>;
 
         bindings = <
             /* row1 (12) */
