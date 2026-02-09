@@ -220,7 +220,7 @@
             bindings = <&none &none>;
 
             // 体感調整
-            pulse-ms = <35>;     // trigger-period(20)より長め推奨
+            pulse-ms = <1000>;     // trigger-period(20)より長め推奨
             fast-dt-ms = <60>;
             slow-dt-ms = <250>;
             min-speed = <3>;
