@@ -57,7 +57,7 @@
 #define JP_HANZEN       GRAVE             // 半角/全角
 
 &msc_input_listener {
-    input-processors = <&zip_wheel_scaler 5 1>;
+    input-processors = <&zip_scroll_scaler 5 1>;
 };
 
 / {
