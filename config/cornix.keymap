@@ -490,8 +490,6 @@
                 &kp F  &kp F &kp F &kp D &kp D &kp D   &none &none &kp K &kp K &kp K &kp J &kp J &kp J
                 &kp F  &kp F &kp F &kp ENTER &kp ENTER &kp ENTER                &kp ENTER &kp ENTER &kp ENTER &kp J &kp J &kp J 
             >;
-            //sensor-bindings = <&rot_long_left &rot_long_right>;
-            sensor-bindings = <&rot_long A S &rot_long L SEMICOLON>;
         };
 
         /* Layer 8: MOUSE3 */
