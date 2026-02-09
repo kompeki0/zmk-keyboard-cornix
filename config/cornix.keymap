@@ -476,7 +476,7 @@
 
         bindings = <
             /* row1 (12) */
-            &none      &trans      &kp LG(TAB)           &mmv_val0 MOVE_UP        &trans        &trans      &trans        &trans          &trans        &trans        &trans     &none
+            &none      &trans      &kp LG(TAB)           &mmv_val0 MOVE_UP        &scroll_wheel SCRL_DOWN        &trans      &trans        &trans          &trans        &trans        &trans     &none
 
             /* row2 (12) */
             &none      &to DEFAULT_WIN      &mmv_val0 MOVE_LEFT &mmv_val0 MOVE_DOWN &mmv_val0 MOVE_RIGHT     &trans   &trans      &mkp LCLK     &mkp MCLK        &mkp RCLK     &to DEFAULT_WIN       &none
