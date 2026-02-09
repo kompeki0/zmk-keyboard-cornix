@@ -245,7 +245,7 @@
             trigger-period-ms = <16>;
             time-to-max-speed-ms = <0>;
 
-            oneshot-scale = <120>;
+            oneshot-scale = <1>;
         };
          scroll2: scroll2 {
             compatible = "zmk,behavior-sensor-rotate";
