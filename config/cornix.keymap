@@ -226,9 +226,6 @@
 
     };
 
-    &msc_input_listener {
-        input-processors = <&zip_wheel_scaler 3 1>;
-    };
 
     macros {
         kill_to_end: kill_to_end {
@@ -487,6 +484,9 @@
         label = "MOUSE";
 
         sensor-bindings = <&rot_scroll &enc_val0>;
+            &msc_input_listener {
+                input-processors = <&zip_wheel_scaler 5 1>;
+            };
 
         bindings = <
             /* row1 (12) */
