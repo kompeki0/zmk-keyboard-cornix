@@ -100,46 +100,21 @@
             bindings = <&mo>, <&kp>;
         };
 
-        sks: sticky_key_short {
+        skm: sticky_key_mouse {
             compatible = "zmk,behavior-sticky-key";
             #binding-cells = <1>;
-            bindings = <&kp>;
-            release-after-ms = <200>;
+            bindings = <&msc>;
+            release-after-ms = <10>;
             quick-release;
             ignore-modifiers;
-        };
-
-        kt_on: key_toggle_on_only {
-            compatible = "zmk,behavior-key-toggle";
-            #binding-cells = <1>;
-            display-name = "Key Toggle On";
-            toggle-mode = "on";
-        };
-
-        kt_off: key_toggle_off_only {
-            compatible = "zmk,behavior-key-toggle";
-            #binding-cells = <1>;
-            display-name = "Key Toggle Off";
-            toggle-mode = "off";
-        };
-
-        rot_long: rot_long {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            #sensor-binding-cells = <2>;
-            bindings = <&sks>, <&sks>;
         };
 
         rot_scroll2: rot_scroll2 {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            bindings = <&skm SCRL_UP>, <&skm SCRL_DOWN>;
         };
 
-        rot_long_left: rot_long_left {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&change_direction A S>, <&change_direction S A>;
-        };
         enc_hold_l: enc_hold_l {
             compatible = "zmk,behavior-sensor-hold-rotate";
             #sensor-binding-cells = <0>;
@@ -209,23 +184,6 @@
             min-speed = <200>;
             max-speed = <3000>;
             trigger-period-ms = <40>;
-        };
-
-
-
-
-        enc_mmv_hold_l: enc_mmv_hold_l {
-            compatible = "zmk,behavior-sensor-hold-rotate";
-            #sensor-binding-cells = <0>;
-            timeout-ms = <60>;              // ここは好み
-            bindings = <&mmv MOVE_RIGHT &mmv MOVE_LEFT>;
-        };
-
-        enc_mmv_hold_r: enc_mmv_hold_r {
-            compatible = "zmk,behavior-sensor-hold-rotate";
-            #sensor-binding-cells = <0>;
-            timeout-ms = <60>;
-            bindings = <&msc MOVE_DOWN &mmv MOVE_UP>;
         };
 
     };
@@ -320,20 +278,6 @@
                 <&macro_press &kp LCTRL>
                 , <&macro_tap &kp RIGHT>
                 , <&macro_release &kp LCTRL>
-                ;
-        };
-
-        change_direction: change_direction {
-            label = "CHANGE_DIRECTION";
-            compatible = "zmk,behavior-macro-two-param";
-            #binding-cells = <2>;
-            bindings =
-                <&macro_param_2to1>
-                , <&macro_press &kt_off 0>
-                , <&macro_param_1to1>
-                , <&macro_press &kt_on 0>
-                , <&macro_param_1to1>
-                , <&macro_press &kt_off 0>
                 ;
         };
 
@@ -469,7 +413,6 @@
                 &none   &trans              &kp SLASH        &kp JP_PIPE      &kp JP_YEN           &kp LEFT         &none  &none  &kp DOWN         &kp ENTER           &kp JP_DQUOTE      &kp JP_QUOTE &kp JP_BACKQUOTE &none
                 &none   &trans              &trans           &kp LC(X)        &kp LC(C)            &kp LC(V)        &kp LC(Z)          &kp LC(Y)           &kp LC(LS(Z))      &trans             &trans      &none
             >;
-            sensor-bindings = <&enc_hold_l &enc_hold_r>;
         };
 
         /* Layer 2: NUMBER */
