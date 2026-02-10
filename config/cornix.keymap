@@ -252,6 +252,22 @@
             #sensor-binding-cells = <0>;
             bindings = <&scroll1 MOVE(0,-1)>, <&scroll1 MOVE(0,1)>;
         };
+        accel_scroll: accel_scroll {
+            compatible = "zmk,behavior-sensor-rotate-accel";
+            #sensor-binding-cells = <0>;
+
+            // cw / ccw
+            bindings = <&scroll1 MOVE(0,-1)>, <&scroll1 MOVE(0, 1)>;
+
+            dt-min-ms = <30>;
+            dt-max-ms = <200>;
+
+            steps-min = <1>;
+            steps-max = <5>;    // 要望どおり上限5
+
+            curve = <1>;        // 0=linear, 1=quad, 2=cubic
+            same-dir-only;      // 逆回転で加速リセットしたいならON
+        };
 
 
     };
@@ -498,7 +514,7 @@
         layer3 {
         label = "MOUSE";
 
-        sensor-bindings = <&scroll2 &enc_val0>;
+        sensor-bindings = <&accel_scroll &enc_val0>;
 
         bindings = <
             /* row1 (12) */
