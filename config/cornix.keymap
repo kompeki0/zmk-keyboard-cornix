@@ -259,8 +259,8 @@
             // cw / ccw
             bindings = <&scroll1 MOVE(0,-1)>, <&scroll1 MOVE(0, 1)>;
 
-            dt-min-ms = <30>;
-            dt-max-ms = <200>;
+            dt-min-ms = <10>;
+            dt-max-ms = <100>;
 
             steps-min = <1>;
             steps-max = <5>;    // 要望どおり上限5
