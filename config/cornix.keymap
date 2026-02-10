@@ -267,6 +267,7 @@
 
             curve = <1>;        // 0=linear, 1=quad, 2=cubic
             same-dir-only;      // 逆回転で加速リセットしたいならON
+            dt-calc-steps = <5>;
         };
 
 
