@@ -260,7 +260,7 @@
             bindings = <&scroll1 MOVE(0,-1)>, <&scroll1 MOVE(0, 1)>;
 
             dt-min-ms = <10>;
-            dt-max-ms = <100>;
+            dt-max-ms = <50>;
 
             steps-min = <1>;
             steps-max = <5>;    // 要望どおり上限5
