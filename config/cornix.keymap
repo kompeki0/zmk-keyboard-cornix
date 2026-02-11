@@ -270,6 +270,11 @@
             dt-calc-steps = <5>;
         };
 
+        tetris: tetris {
+            compatible = "zmk,behavior-tetris";
+            #binding-cells = <1>;
+        };
+
 
     };
 
@@ -363,6 +368,52 @@
                 <&macro_press &kp LCTRL>
                 , <&macro_tap &kp RIGHT>
                 , <&macro_release &kp LCTRL>
+                ;
+        };
+
+        press_pswd1: press_pswd1 {
+            label = "PRESS_PSWD_1";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap &kp N8>
+                , <&macro_tap &kp W>
+                , <&macro_tap &kp S>
+                , <&macro_tap &kp F>
+                , <&macro_tap &kp C>
+                , <&macro_tap &kp N8>
+                , <&macro_tap &kp LS(Z)>
+                , <&macro_tap &kp LS(P)>
+                , <&macro_tap &kp N4>
+                , <&macro_tap &kp N3>
+                , <&macro_tap &kp I>
+                , <&macro_tap &kp G>
+                , <&macro_tap &kp LS(Z)>
+                , <&macro_tap &kp P>
+                , <&macro_tap &kp LS(B)>
+                ;
+        };
+
+        press_pswd2: press_pswd2 {
+            label = "PRESS_PSWD_2";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap &kp LS(B)>
+                , <&macro_tap &kp I>
+                , <&macro_tap &kp LS(S)>
+                , <&macro_tap &kp N3>
+                , <&macro_tap &kp J>
+                , <&macro_tap &kp N6>
+                , <&macro_tap &kp I>
+                , <&macro_tap &kp LS(J)>
+                , <&macro_tap &kp LS(R)>
+                , <&macro_tap &kp LS(X)>
+                , <&macro_tap &kp N3>
+                , <&macro_tap &kp A>
+                , <&macro_tap &kp LS(A)>
+                , <&macro_tap &kp N5>
+                , <&macro_tap &kp W>
                 ;
         };
 
@@ -519,10 +570,10 @@
 
         bindings = <
             /* row1 (12) */
-            &none      &trans      &kp LG(TAB)           &mmv_val0 MOVE_UP        &scroll_wheel SCRL_DOWN        &trans      &trans        &trans          &trans        &trans        &trans     &none
+            &tetris 0      &trans      &kp LG(TAB)           &mmv_val0 MOVE_UP        &scroll_wheel SCRL_DOWN        &trans      &trans        &trans          &trans        &trans        &trans     &none
 
             /* row2 (12) */
-            &none      &to DEFAULT_WIN      &mmv_val0 MOVE_LEFT &mmv_val0 MOVE_DOWN &mmv_val0 MOVE_RIGHT     &trans   &trans      &mkp LCLK     &mkp MCLK        &mkp RCLK     &to DEFAULT_WIN       &none
+            &tetris 1      &to DEFAULT_WIN      &mmv_val0 MOVE_LEFT &mmv_val0 MOVE_DOWN &mmv_val0 MOVE_RIGHT     &trans   &trans      &mkp LCLK     &mkp MCLK        &mkp RCLK     &to DEFAULT_WIN       &none
 
             /* row3 (14) */
             &none      &trans      &trans        &trans        &trans        &trans      &none  &mkp LCLK  &trans        &kp C_AC_BACK       &kp C_AC_REFRESH    &kp C_AC_FORWARD      &trans     &none

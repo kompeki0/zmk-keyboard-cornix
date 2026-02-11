@@ -41,5 +41,9 @@ manifest:
       remote: kompeki0
       revision: main
       clone-depth: 1
+    - name: zmk-tetris
+      remote: kompeki0
+      revision: main
+      clone-depth: 1
   self:
     path: config
