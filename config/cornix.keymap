@@ -119,7 +119,8 @@
         rot_scroll2: rot_scroll2 {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&skm SCRL_UP>, <&skm SCRL_DOWN>;
+            tap-ms = <20>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
         };
 
         enc_hold_l: enc_hold_l {
@@ -537,7 +538,7 @@
                 /* row4 (12) */
                 &none         &mo FUNCTION  &kp LALT  &kp LCTRL  &lt NUMBER  TAB   &kp RCMD   &kp BSPC  &lt NUMBER SPACE   &kp ENTER  &kp RCTRL  &kp ESC   &none
             >;
-            sensor-bindings = <&enc_alt_tab &rot_scroll>;
+            sensor-bindings = <&enc_alt_tab &rot_scroll2>;
         };
 
         /* Layer 1: CONTROL */
