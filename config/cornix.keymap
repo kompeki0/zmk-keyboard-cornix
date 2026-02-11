@@ -649,8 +649,8 @@
         layer10 {
             label = "TETRIS";
             bindings = <
-                &tetris 0  &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &none
-                &tetris 1  &trans &tetris 10 &tetris 13 &tetris 11 &trans   &trans &tetris 12 &trans &trans &trans &none
+                &tetris 0  &trans &trans &tetris 15 &trans &trans   &trans &trans &trans &trans &trans &none
+                &tetris 1  &trans &tetris 10 &tetris 13 &tetris 11 &trans   &trans &tetris 12 &tetris 14 &trans &trans &none
                 &none  &trans &trans &trans &trans &trans   &none &none &trans &trans &trans &trans &trans &none
                 &to DEFAULT_WIN  &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &none
             >;
