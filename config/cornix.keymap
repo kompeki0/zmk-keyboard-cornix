@@ -657,7 +657,7 @@
                 &tetris 0  &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &none
                 &tetris 1  &trans &trans &trans &trans &trans   &trans &tetris 10 &tetris 11 &trans &trans &none
                 &none  &trans &trans &trans &trans &trans   &none &none &trans &trans &trans &trans &trans &none
-                &none  &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &none
+                &to DEFAULT_WIN  &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &none
             >;
         };
     };
