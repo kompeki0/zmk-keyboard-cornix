@@ -576,7 +576,7 @@
             &tetris 1      &to DEFAULT_WIN      &mmv_val0 MOVE_LEFT &mmv_val0 MOVE_DOWN &mmv_val0 MOVE_RIGHT     &trans   &trans      &mkp LCLK     &mkp MCLK        &mkp RCLK     &to DEFAULT_WIN       &none
 
             /* row3 (14) */
-            &tetris 2      &trans      &trans        &trans        &trans        &trans      &none  &mkp LCLK  &trans        &kp C_AC_BACK       &kp C_AC_REFRESH    &kp C_AC_FORWARD      &trans     &none
+            &tetris 6      &trans      &trans        &trans        &trans        &trans      &none  &mkp LCLK  &trans        &kp C_AC_BACK       &kp C_AC_REFRESH    &kp C_AC_FORWARD      &trans     &none
 
             /* row4 (12) */
             &tetris 3      &to DEFAULT_WIN  &trans    &trans &trans &trans      &trans        &trans          &trans        &trans        &trans     &none
