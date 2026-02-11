@@ -27,7 +27,7 @@
 #define SDVX2 7
 #define MOUSE3 8
 #define MOUSE4 9
-#define FPS 10
+#define TETRIS 10
 
 // -------------------------
 // JP key conversion (same as before)
@@ -570,16 +570,16 @@
 
         bindings = <
             /* row1 (12) */
-            &tetris 0      &trans      &kp LG(TAB)           &mmv_val0 MOVE_UP        &scroll_wheel SCRL_DOWN        &trans      &trans        &trans          &trans        &trans        &trans     &tetris 4
+            &none      &trans      &kp LG(TAB)           &mmv_val0 MOVE_UP        &scroll_wheel SCRL_DOWN        &trans      &trans        &trans          &trans        &trans        &trans     &none
 
             /* row2 (12) */
-            &tetris 1      &to DEFAULT_WIN      &mmv_val0 MOVE_LEFT &mmv_val0 MOVE_DOWN &mmv_val0 MOVE_RIGHT     &trans   &trans      &mkp LCLK     &mkp MCLK        &mkp RCLK     &to DEFAULT_WIN       &none
+            &none      &to DEFAULT_WIN      &mmv_val0 MOVE_LEFT &mmv_val0 MOVE_DOWN &mmv_val0 MOVE_RIGHT     &trans   &trans      &mkp LCLK     &mkp MCLK        &mkp RCLK     &to DEFAULT_WIN       &none
 
             /* row3 (14) */
-            &tetris 6      &trans      &trans        &trans        &trans        &trans      &none  &mkp LCLK  &trans        &kp C_AC_BACK       &kp C_AC_REFRESH    &kp C_AC_FORWARD      &trans     &none
+            &none      &trans      &trans        &trans        &trans        &trans      &none  &mkp LCLK  &trans        &kp C_AC_BACK       &kp C_AC_REFRESH    &kp C_AC_FORWARD      &trans     &none
 
             /* row4 (12) */
-            &tetris 3      &to DEFAULT_WIN  &trans    &trans &trans &trans      &trans        &trans          &trans        &trans        &trans     &none
+            &none      &to DEFAULT_WIN  &trans    &trans &trans &trans      &trans        &trans          &trans        &trans        &trans     &none
         >;
         };
 
@@ -599,7 +599,7 @@
             label = "FUNCTION";
             bindings = <
                 &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4   &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &none
-                &none  &to DEFAULT_WIN &to SDVX     &to SDVX2        &trans        &bt BT_CLR      &kp F6  &kp F7  &kp F8  &kp F9  &kp F10 &none
+                &none  &to DEFAULT_WIN &to SDVX     &to TETRIS        &trans        &bt BT_CLR      &kp F6  &kp F7  &kp F8  &kp F9  &kp F10 &none
                 &none  &trans        &trans        &trans        &trans        &bt BT_CLR_ALL  &none  &none  &kp F11 &kp F12 &trans  &trans  &trans &none
                 &none  &trans        &trans        &trans        &trans        &trans          &kp DEL &trans  &trans  &trans  &trans  &none
             >;
@@ -650,12 +650,12 @@
             >;
         };
 
-        /* Layer 10: FPS (blank as before) */
+        /* Layer 10: TETRIS (blank as before) */
         layer10 {
-            label = "FPS";
+            label = "TETRIS";
             bindings = <
-                &none  &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &none
-                &none  &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &none
+                &tetris 0  &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &none
+                &tetris 1  &trans &trans &trans &trans &trans   &trans &tetris 10 &tetris 11 &trans &trans &none
                 &none  &trans &trans &trans &trans &trans   &none &none &trans &trans &trans &trans &trans &none
                 &none  &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &none
             >;
