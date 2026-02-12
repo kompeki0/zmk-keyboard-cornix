@@ -117,39 +117,39 @@
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
         };
 
-        enc_hold_l: enc_hold_l {
-            compatible = "zmk,behavior-sensor-hold-step-rotate";
-            #sensor-binding-cells = <0>;
-            step-group-size = <0>;
-            timeout-ms = <200>;
-            direction-hold-mode = <0>;
+        // enc_hold_l: enc_hold_l {
+        //     compatible = "zmk,behavior-sensor-hold-step-rotate";
+        //     #sensor-binding-cells = <0>;
+        //     step-group-size = <0>;
+        //     timeout-ms = <200>;
+        //     direction-hold-mode = <0>;
 
-            require-top-layer;
+        //     require-top-layer;
 
 
-            bindings = <
-                &kp A   /* hold_cw  */
-                &kp S   /* hold_ccw */
-                &none    /* step_cw  */
-                &none   /* step_ccw */
-            >;
-        };
-        enc_hold_r: enc_hold_r {
-            compatible = "zmk,behavior-sensor-hold-step-rotate";
-            #sensor-binding-cells = <0>;
-            step-group-size = <0>;
-            timeout-ms = <200>;
-            direction-hold-mode = <0>;
+        //     bindings = <
+        //         &kp A   /* hold_cw  */
+        //         &kp S   /* hold_ccw */
+        //         &none    /* step_cw  */
+        //         &none   /* step_ccw */
+        //     >;
+        // };
+        // enc_hold_r: enc_hold_r {
+        //     compatible = "zmk,behavior-sensor-hold-step-rotate";
+        //     #sensor-binding-cells = <0>;
+        //     step-group-size = <0>;
+        //     timeout-ms = <200>;
+        //     direction-hold-mode = <0>;
 
-            require-top-layer;
+        //     require-top-layer;
 
-            bindings = <
-                &kp L   /* hold_cw  */
-                &kp SEMICOLON   /* hold_ccw */
-                &none    /* step_cw  */
-                &none   /* step_ccw */
-            >;
-        };
+        //     bindings = <
+        //         &kp L   /* hold_cw  */
+        //         &kp SEMICOLON   /* hold_ccw */
+        //         &none    /* step_cw  */
+        //         &none   /* step_ccw */
+        //     >;
+        // };
         rot_scroll: rot_scroll {
             compatible = "zmk,behavior-sensor-hold-rotate";
             #sensor-binding-cells = <0>;
@@ -638,7 +638,7 @@
                 &rck F  &rck F &rck F &rck D &rck D &rck D   &none &none &rck K &rck K &rck K &rck J &rck J &rck J
                 &rck ENTER &rck ENTER &rck ENTER &none &none &none                &none &none &none &rck ENTER &rck ENTER &rck ENTER 
             >;
-            sensor-bindings = <&enc_hold_l &enc_hold_r>;
+            // sensor-bindings = <&enc_hold_l &enc_hold_r>;
         };
 
         /* Layer 7: MOUSE2 */
