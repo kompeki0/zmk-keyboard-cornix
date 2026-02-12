@@ -120,11 +120,12 @@
         enc_hold_l: enc_hold_l {
             compatible = "zmk,behavior-sensor-hold-step-rotate";
             #sensor-binding-cells = <0>;
-
+            step-group-size = <0>;
             timeout-ms = <200>;
             direction-hold-mode = <0>;
 
             require-top-layer;
+
 
             bindings = <
                 &kp A   /* hold_cw  */
@@ -136,7 +137,7 @@
         enc_hold_r: enc_hold_r {
             compatible = "zmk,behavior-sensor-hold-step-rotate";
             #sensor-binding-cells = <0>;
-
+            step-group-size = <0>;
             timeout-ms = <200>;
             direction-hold-mode = <0>;
 
@@ -560,7 +561,7 @@
                 /* row4 (12) */
                 &none         &mo FUNCTION  &kp LALT  &kp LCTRL  &lt NUMBER  TAB   &kp RCMD   &kp BSPC  &lt NUMBER SPACE   &kp ENTER  &kp RCTRL  &kp ESC   &none
             >;
-            sensor-bindings = <&enc_alt_tab &rot_scroll2>;
+            sensor-bindings = <&enc_alt_tab &accel_scroll>;
         };
 
         /* Layer 1: CONTROL */
