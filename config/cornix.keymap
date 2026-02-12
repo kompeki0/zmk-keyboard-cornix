@@ -118,16 +118,36 @@
         };
 
         enc_hold_l: enc_hold_l {
-            compatible = "zmk,behavior-sensor-hold-rotate";
+            compatible = "zmk,behavior-sensor-hold-step-rotate";
             #sensor-binding-cells = <0>;
+
             timeout-ms = <200>;
-            bindings = <&kp A &kp S>;
+            direction-hold-mode = <0>;
+
+            require-top-layer;
+
+            bindings = <
+                &kp A   /* hold_cw  */
+                &kp S   /* hold_ccw */
+                &none    /* step_cw  */
+                &none   /* step_ccw */
+            >;
         };
         enc_hold_r: enc_hold_r {
-            compatible = "zmk,behavior-sensor-hold-rotate";
+            compatible = "zmk,behavior-sensor-hold-step-rotate";
             #sensor-binding-cells = <0>;
+
             timeout-ms = <200>;
-            bindings = <&kp L &kp SEMICOLON>;
+            direction-hold-mode = <0>;
+
+            require-top-layer;
+
+            bindings = <
+                &kp L   /* hold_cw  */
+                &kp SEMICOLON   /* hold_ccw */
+                &none    /* step_cw  */
+                &none   /* step_ccw */
+            >;
         };
         rot_scroll: rot_scroll {
             compatible = "zmk,behavior-sensor-hold-rotate";
