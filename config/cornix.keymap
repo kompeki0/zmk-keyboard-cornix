@@ -209,23 +209,6 @@
             trigger-period-ms = <40>;
         };
 
-        enc_scroll: enc_scroll {
-            compatible = "zmk,behavior-sensor-scroll-velocity";
-            #sensor-binding-cells = <0>;
-            bindings = <&none &none>;
-
-            axis = <0>;            // 0=縦スクロール
-            invert = <0>;
-
-            slow-amount = <1>;     // ゆっくり回すと 1 tick = 1行
-            fast-amount = <8>;     // 速いと 1 tick = 8行
-
-            fast-threshold-ms = <18>;
-            slow-threshold-ms = <160>;
-
-            ema-alpha-permil = <300>;
-        };
-
         scroll_wheel: scroll_wheel {
             compatible = "zmk,behavior-input-two-axis";
             #binding-cells = <1>;
@@ -236,20 +219,6 @@
             // acceleration-exponent = <0>; // 必要なら
         };
 
-        enc_scroll_v: enc_scroll_v {
-            compatible = "zmk,behavior-sensor-scroll-pulse";
-            #sensor-binding-cells = <0>;
-            binding = <&scroll_wheel>;
-            bindings = <&none &none>;
-
-            // 体感調整
-            pulse-ms = <1000>;     // trigger-period(20)より長め推奨
-            fast-dt-ms = <60>;
-            slow-dt-ms = <250>;
-            min-speed = <3>;
-            max-speed = <18>;
-            axis = <0>;          // vertical
-        };
 
         scroll1: scroll1 {
             compatible = "zmk,behavior-input-two-axis-oneshot";
