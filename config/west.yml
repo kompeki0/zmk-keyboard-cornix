@@ -41,6 +41,10 @@ manifest:
       remote: kompeki0
       revision: main
       clone-depth: 1
+    - name: zmk-sensor-rotate-tools
+      remote: kompeki0
+      revision: main
+      clone-depth: 1
     - name: zmk-tetris
       remote: kompeki0
       revision: main
