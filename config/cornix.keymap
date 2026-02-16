@@ -189,7 +189,7 @@
 
             bindings = <&none &none>;
 
-            index = <0>;
+            index = <1>;
             min = <0>;
             max = <100>;
             step = <5>;
@@ -200,7 +200,7 @@
             compatible = "zmk,behavior-mouse-move-value";
             #binding-cells = <1>;
             binding = <&mmv>;
-            index = <0>;
+            index = <1>;
 
             value-min = <0>;
             value-max = <100>;
@@ -288,8 +288,7 @@
             index = <1>;
             fallback = <0>;
             case-values = <1 2>;
-            bindings = <&kp A>, <&kp B>;
-            default-binding = <&kp C>;
+            bindings = <&kp A &kp B &kp C>;
         };
 
     };
