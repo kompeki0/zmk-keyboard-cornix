@@ -550,7 +550,7 @@
         default_layer {
             bindings = <
                 /* row1 (12) */
-                &none         &kp Q      &kp W     &kp E     &kp R        &kp T      &kp Y     &kp U        &kp I      &kp O      &kp P      &none
+                &kp C_VOL_UP         &kp Q      &kp W     &kp E     &kp R        &kp T      &kp Y     &kp U        &kp I      &kp O      &kp P      &none
 
                 /* row2 (12) */
                 &none         &lt CONTROL A      &kp S     &kp D     &kp F        &kp G      &kp H     &kp J        &kp K      &kp L      &lt ARROW SPACE   &to MOUSE
